@@ -38,21 +38,21 @@ typingEffect();
 // About
 
 document.addEventListener("DOMContentLoaded", () => {
-  const element = document.querySelector(".aboutContainer");
+    const element = document.querySelector(".aboutContainer");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("isVisible");
-        observer.unobserve(entry.target);
-      }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("isVisible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.1
     });
-  }, {
-    root: null,
-    threshold: 0.1
-  });
 
-  observer.observe(element);
+    observer.observe(element);
 });
 // Education
 
@@ -121,13 +121,66 @@ experienceTitle.forEach((item, index) =>
     }))
 
 
-    // Projects
+// Projects
 
-    import {workPortfolio} from "./data.js"
+import { workPortfolio } from "./data.js"
 
-    const projects = document.querySelector(".projectReferences")
+const projects = document.querySelector(".projectReferences")
+const projectInfo = document.querySelector(".projectInfo")
+const projLeftHead = document.querySelector(".projectLeftHead")
+const projectRight = document.querySelector(".projectRight")
 
-    projects.textContent = `
-    <a href="${workPortfolio}"><img src="${workPortfolio.img}" alt=""></a>
-    `
-    
+workPortfolio.forEach(obj => {
+    projects.innerHTML += `
+        <img class="projectImg" src="${obj.img}" alt="image of project page">
+        `
+}
+)
+
+const projectImg = document.querySelectorAll(".projectImg")
+const projectNr = projLeftHead.querySelector("h3")
+const image = projectRight.querySelector("img")
+const projDetails = document.querySelector(".detailsText")
+
+projectImg.forEach((img, index) => img.addEventListener("click", () => {
+    const project = workPortfolio[index]
+    projectNr.textContent = `Project #${project.id}`;
+    projDetails.innerHTML = `
+                <h1>${project.name}</h1>
+                                <p><strong>Developed with: </strong>${project.type}</p>
+                                <p><strong>Description: </strong>${project.description}</p>
+                                <p><strong>Date: </strong>${project.date}</p>
+                                <p><strong>Status: </strong>${project.status}</p>
+                `;
+
+    image.src = `${project.img}`;
+
+    projectInfo.style.display = "flex"
+
+}
+))
+
+const closeBtn=document.querySelector(".projectCrossMark")
+closeBtn.addEventListener("click",()=>{
+    projectInfo.style.display="none"
+})
+
+const projectInfoImg = document.querySelector("projectRight img")
+
+
+const checkBtn=document.querySelector(".check")
+checkBtn.addEventListener("click",()=>{
+    workPortfolio.forEach(obj=> {
+        checkBtn.href = `${obj.link}`
+    })
+})
+// const projectBtns=document.querySelectorAll(".projectBtns")
+
+// projectBtns.forEach(btn=> btn.addEventListener("click",()=>{
+//     workPortfolio.forEach(obj =>{
+//         if(btn.value==="React"){
+//             projectImg.filter(img=> img==="React")
+//         } else if (btn.value ==="")
+
+//     })
+// }))

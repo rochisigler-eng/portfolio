@@ -545,14 +545,15 @@ section {
     margin-bottom: .5rem;
 }
 
-.projectDetails button{
+.projectDetails a{
     border-radius: 10px;
-    width: 8rem;
-    height: 3rem;
+    width: 9rem;
+    height: 5rem;
     font-size: 1.3rem;
     background-color:  #c82fff;
     color: var(--color-text);
     border: none;
+    text-decoration: none;
 }
 
 .projectRight img{
@@ -575,6 +576,21 @@ section {
 .projectCrossMark:hover{
     cursor: pointer;
 }
+
+
+.modalDisplay{
+    position: absolute;
+    display: flex;
+}
+.modalDisplay svg{
+
+}
+.modalArrows{
+    position: sticky;
+}
+
+
+
 .projectReferences{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -586,6 +602,7 @@ section {
     height: 95%;
     border-radius: 10px;
     border: 1px solid var(--color-dogerBlue);
+    cursor: pointer;
 
 }
 
