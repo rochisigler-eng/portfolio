@@ -15,6 +15,7 @@
     --color-tertiary: #61dbfd;
     --color-dogerBlue: #2fa1ff;
     --color-four: #ffae2f;
+    --color-five: #c82fff;
 
     /* Fonts */
     --font-roboto: "Roboto";
@@ -212,15 +213,17 @@ section {
     color: var(--color-text);
     z-index: 1;
     opacity: 0;
-  transform: translateX(200px);
-  transition:
-    opacity 1.5s ease-out,
-    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateX(200px);
+    transition:
+        opacity 1.5s ease-out,
+        transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 .aboutContainer.isVisible {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
+
 .aboutLeft {
     width: 50%;
 }
@@ -250,7 +253,7 @@ section {
 
 
 
-.aboutRight p {
+.aboutPara {
     padding-left: 30px;
     padding-bottom: 20px;
 }
@@ -274,43 +277,52 @@ section {
 
 /* Education */
 
-.education{
-    position: relative;
-    display: flex;
-    height: 600px;
-}
 .educationContainer {
     height: 600px;
-    width: 80%;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.educationContent {
+   width: 100%;
+    height: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: var(--color-bg);
+    background-color: var(--color-secondary);
     border-radius: 0 0 30px 30px;
-    overflow: scroll;
+     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-     scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
 }
 
-
+.progressBar{
+    background-color: var(--color-five);
+    width: 100%;
+    height: .5rem;
+}
 .educationLeft,
 .educationRight {
     width: 100%;
 }
 
 .educationLeft {
-    margin-top: 1rem;
-    border-right: 2px white solid;
+    margin-top: 3rem;
 }
 
 .educationRight {
-    margin-top: 12rem;
+    margin-top: 15rem;
+}
 
+.divider {
+    position: sticky;
+    top: 0;
+    border: 2px solid white;
+    height: 100%;
 }
 
 .educationItem {
@@ -319,10 +331,10 @@ section {
     border-radius: 10px;
     padding: 2.5rem;
     margin-bottom: 11rem;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
+    margin-left: auto;
+    margin-right: auto;
     width: 75%;
-    transition: 1s ease;
+    transition: fadeIn 1s ease;
 }
 
 .educationItem.show {
@@ -331,10 +343,12 @@ section {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
-@keyframes fadeIn{
-    from{
+
+@keyframes fadeIn {
+    from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -344,27 +358,23 @@ section {
     position: absolute;
     content: "";
     top: 0;
-    right: -4.7rem;
+    right: -91px;
     border-radius: 50%;
     background-color: var(--color-dogerBlue);
-    width: 1rem;
-    height: 1rem;
+    width: 1.3rem;
+    height: 1.3rem;
 }
 
 .right::after {
     position: absolute;
     content: "";
     top: 0;
-    left: -5rem;
+    left: -92px;
     border-radius: 50%;
     background-color: var(--color-four);
-    width: 1rem;
-    height: 1rem;
+    width: 1.3rem;
+    height: 1.3rem;
 }
-
-
-
-
 
 .itemTitle {
     display: flex;
@@ -372,16 +382,22 @@ section {
     padding-bottom: 15px;
 }
 
-.itemTitle h2 {
-    padding-right: 1rem;
+.yearSpan {
+    font-weight: 800;
+    font-size: 1.6rem;
+    padding-right: .5rem;
 }
 
-.educationItem.left h3 {
+.colorTitleLeft {
     color: var(--color-dogerBlue);
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
-.educationItem.right h3 {
+.colorTitleRight {
     color: var(--color-four);
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .educationItem h4 {
@@ -390,11 +406,11 @@ section {
 
 .educationBtns {
     position: sticky;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    top: 0;
 }
 
 .linkUp {
@@ -433,11 +449,13 @@ section {
     margin-bottom: 2rem;
 
 }
-.experienceDescription p{
+
+.experienceDescription p {
     padding-bottom: 1rem;
 }
-.experienceDescription a{
-    color:#c82fff;
+
+.experienceDescription a {
+    color: #c82fff;
     font-size: 1.3rem;
 }
 
@@ -523,54 +541,61 @@ section {
     color: white;
 }
 
-.detailsText{
+.detailsText {
     color: var(--color-text);
     margin-bottom: 2rem;
 }
+
 .detailsText p {
     margin-bottom: .5rem;
 }
+
 .detailsText h1 {
     margin-bottom: .5rem;
 }
 
-.projectDetails button{
+.projectDetails button {
     border-radius: 10px;
     width: 8rem;
     height: 3rem;
     font-size: 1.3rem;
-    background-color:  #c82fff;
+    background-color: #c82fff;
     color: var(--color-text);
     border: none;
 }
 
-.projectRight img{
+.projectRight img {
     width: 100%;
 }
-.projectRight img:hover{
+
+.projectRight img:hover {
     cursor: zoom-in;
 }
-.projectCrossMark{
+
+.projectCrossMark {
     display: flex;
     justify-content: flex-end;
     margin-bottom: .5rem;
 }
-.projectRight svg{
+
+.projectRight svg {
     width: 20px;
     height: 20px;
     fill: white;
 }
 
-.projectCrossMark:hover{
+.projectCrossMark:hover {
     cursor: pointer;
 }
-.projectReferences{
+
+.projectReferences {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
-.projectReferences img{
+
+.projectReferences img {
     width: 95%;
     height: 95%;
     border-radius: 10px;
@@ -578,11 +603,12 @@ section {
 
 }
 
-.pageBtns{
+.pageBtns {
     display: flex;
     justify-content: center;
 }
-.pageBtns button{
+
+.pageBtns button {
     width: 2.4rem;
     height: 2.5rem;
     border-radius: 5px;
@@ -592,7 +618,7 @@ section {
     font-size: 1rem;
 }
 
-.pageBtns button:hover{
+.pageBtns button:hover {
     cursor: pointer;
     background-color: var(--color-dogerBlue);
     color: var(--color-text);
@@ -601,12 +627,13 @@ section {
 
 /* Footer */
 
-footer{
+footer {
     background-color: var(--color-dark);
     display: flex;
     color: var(--color-text);
 }
-.contactLeft{
+
+.contactLeft {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -614,32 +641,37 @@ footer{
     margin-top: 4rem;
     margin-bottom: 5rem;
 }
-.contactLeft h1{
+
+.contactLeft h1 {
     font-size: 3rem;
 }
-.contactLeft h2{
+
+.contactLeft h2 {
     font-weight: 400;
 }
-.contactRight{
+
+.contactRight {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
-.contactRight p{
+
+.contactRight p {
     padding-bottom: 1rem;
     display: flex;
     align-items: flex-start;
 }
-.contactRight a{
+
+.contactRight a {
     text-decoration: none;
     font-style: normal;
     font-size: 1.5rem;
     color: var(--color-text);
 }
 
-.contactRight svg{
+.contactRight svg {
     width: 2rem;
     height: 2rem;
     fill: white;
