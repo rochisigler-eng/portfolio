@@ -37,6 +37,12 @@ section {
     margin-right: 10%;
 }
 
+@media screen and (max-width:830px) {
+    section{
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+}
 .navBar {
     position: relative;
     display: flex;
@@ -276,19 +282,23 @@ section {
 }
 
 @media screen and (max-width: 830px) {
-    .aboutContainer{
+    .aboutContainer {
         display: block;
     }
+
     .aboutLeft img {
         display: none;
     }
-    .aboutRight{
+
+    .aboutRight {
         width: 100%;
     }
-    .skillsContainer{
+
+    .skillsContainer {
         flex-wrap: wrap;
     }
-    .skills{
+
+    .skills {
         margin-bottom: 1rem;
     }
 }
@@ -303,12 +313,12 @@ section {
 }
 
 .educationContent {
-   width: 100%;
+    width: 100%;
     height: 100%;
     display: flex;
     background-color: var(--color-secondary);
     border-radius: 0 0 30px 30px;
-     overflow: scroll;
+    overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
     scroll-behavior: smooth;
@@ -318,11 +328,12 @@ section {
     display: none;
 }
 
-.progressBar{
+.progressBar {
     background-color: var(--color-five);
     width: 100%;
     height: .5rem;
 }
+
 .educationLeft,
 .educationRight {
     width: 100%;
@@ -453,6 +464,54 @@ section {
     width: 6rem;
     height: 6rem;
     color: var(--color-dogerBlue);
+}
+
+.mobileEducationContainer {
+    display: none;
+}
+
+@media screen and (max-width: 830px) {
+    .educationContainer {
+        display: none;
+    }
+
+    .mobileEducationContainer {
+        display: block;
+    }
+
+    .mobileEducationItems {
+        border-radius: 10px;
+    }
+
+    .educationItem {
+        background-color: transparent;
+        margin-bottom: 1.3rem;
+        width: 100%;
+        padding: .5rem;
+        color: var(--color-text);
+    }
+
+    .itemTitle {
+        display: block;
+        padding-bottom: 5px;
+    }
+
+    .yearSpan {
+        font-weight: 800;
+        font-size: 1.2rem;
+        padding-right: 0rem;
+    }
+
+    .colorTitle {
+        color: var(--color-dogerBlue);
+    }
+
+    .educationItem h4 {
+        padding-bottom: .1rem;
+    }
+    .educationStudiesPara {
+        font-weight: 200;
+    }
 }
 
 /* Experience */
