@@ -275,6 +275,24 @@ section {
 
 }
 
+@media screen and (max-width: 830px) {
+    .aboutContainer{
+        display: block;
+    }
+    .aboutLeft img {
+        display: none;
+    }
+    .aboutRight{
+        width: 100%;
+    }
+    .skillsContainer{
+        flex-wrap: wrap;
+    }
+    .skills{
+        margin-bottom: 1rem;
+    }
+}
+
 /* Education */
 
 .educationContainer {
