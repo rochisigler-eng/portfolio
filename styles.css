@@ -162,15 +162,7 @@ section {
     transition: transform .5s ease-in-out;
 }
 
-/* 
-@keyframes floating {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-40px);
-    }
-} */
+
 .heroImg:hover {
     transform: scale(1.2)
 }
@@ -302,10 +294,8 @@ section {
      scroll-behavior: smooth;
 }
 
-/* For Chrome, Safari, Opera, and other WebKit-based browsers */
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
-    /* or width: 0; height: 0; */
 }
 
 
