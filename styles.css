@@ -563,8 +563,18 @@ section {
 }
 
 @media screen and (max-width:830px) {
+    .experienceContainerDesktop{
+        display: none;
+    }
     .experienceMobile{
         display: block;
+    }
+    .experienceItemContent{
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .experienceJob{
+        display: flex;
     }
 }
 
