@@ -558,6 +558,15 @@ section {
 .experienceItemContent:hover {
     cursor: pointer;
 }
+.experienceMobile{
+    display: none;
+}
+
+@media screen and (max-width:830px) {
+    .experienceMobile{
+        display: block;
+    }
+}
 
 /* Projects */
 
