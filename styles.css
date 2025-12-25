@@ -538,9 +538,13 @@ section {
 
 .experienceItemContent {
     display: flex;
+    align-items: flex-end;
 }
-
-.experienceItemContent h4 {
+.experienceYear{
+    font-size: 1.5rem;
+    padding-right: .8rem;
+}
+.experienceColorTitle {
     color: var(--color-dogerBlue);
     margin-left: 10px;
 }
