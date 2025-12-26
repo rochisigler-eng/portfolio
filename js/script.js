@@ -1,4 +1,4 @@
-const menuBtn = document.querySelector(".menuBtn")
+const menuButton = document.querySelector(".menuBtn")
 const menuList = document.querySelector(".menuItems")
 
 let menuOpen = false;
@@ -13,7 +13,7 @@ const toggleMenu = () => {
         menuOpen = false;
     }
 }
-menuBtn.addEventListener("click", () => {
+menuButton.addEventListener("click", () => {
     toggleMenu();
 })
 
