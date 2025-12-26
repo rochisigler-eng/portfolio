@@ -1,18 +1,20 @@
-const menuBtn = document.querySelector(".menuBtn")
+const menuButton = document.querySelector(".menuBtn")
 const menuList = document.querySelector(".menuItems")
 
 let menuOpen = false;
-menuBtn.addEventListener("click", () => {
+const toggleMenu = () => {
     if (!menuOpen) {
-        menuBtn.src = "assets/nav/closeIcon.png"
+        menuButton.src = "assets/nav/closeIcon.png"
         menuList.style.display = "flex"
         menuOpen = true;
     } else {
-        menuBtn.src = "assets/nav/menuIcon.png"
+        menuButton.src = "assets/nav/menuIcon.png"
         menuList.style.display = "none"
         menuOpen = false;
     }
-
+}
+menuButton.addEventListener("click", () => {
+    toggleMenu();
 })
 
 // Hero
@@ -21,7 +23,7 @@ const heroTitle = document.querySelector(".heroTitle")
 
 const str = `Hi!
 My name is Rochi,
-frontend developer
+Front-End Developer
 and this is my work...`
 let i = 0;
 const typingEffect = () => {
@@ -38,29 +40,31 @@ typingEffect();
 // About
 
 document.addEventListener("DOMContentLoaded", () => {
-  const element = document.querySelector(".aboutContainer");
+    const element = document.querySelector(".aboutContainer");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("isVisible");
-        observer.unobserve(entry.target);
-      }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("isVisible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.1
     });
-  }, {
-    root: null,
-    threshold: 0.1
-  });
 
-  observer.observe(element);
+    observer.observe(element);
 });
 // Education
 
-const educationContainer = document.querySelector(".educationContainer")
+const educationContainer = document.querySelector(".educationContent")
 const educationItem = document.querySelectorAll(".educationItem")
-const upBtn = document.querySelector(".linkUp")
-const downBtn = document.querySelector(".linkDown");
-
+const upButton = document.querySelector(".linkUp")
+const downButton = document.querySelector(".linkDown");
+const progressBar = document.querySelector(".progressBar")
+let currentStep = 0;
+const totalSteps = 3;
 
 const showEducationItems = (entries) => {
     entries.forEach((entry) => {
@@ -76,58 +80,158 @@ const showEducationItems = (entries) => {
 
 const options = {
     root: educationContainer,
-    threshold: 1.0
+    threshold: 0.9,
+    rootMargin: "0px 0px -1px 0px"
 };
 
 const observer = new IntersectionObserver(showEducationItems, options);
 
 educationItem.forEach(item => observer.observe(item));
 
+const updateProgressBar = () => {
+    const progress = (currentStep / totalSteps) * 100;
+    progressBar.style.width = `${progress}%`;
+}
+const nextStep = () => {
+     if (currentStep < totalSteps) {
+        currentStep++;
+        updateProgressBar();
+    }
+};
+const prevStep = () => {
+    if (currentStep > 0) {
+        currentStep--;
+        updateProgressBar();
+    }
+};
 const scrollDown = () => {
     educationContainer.scrollBy(0, 250)
 }
 const scrollUp = () => {
     educationContainer.scrollBy(0, -250)
 }
-upBtn.addEventListener("click", () => {
+upButton.addEventListener("click", () => {
     scrollUp()
+    prevStep()
 })
 
-downBtn.addEventListener("click", () => {
+downButton.addEventListener("click", () => {
     scrollDown()
+    nextStep()
 })
 
 // Experience
 const experienceTitle = document.querySelectorAll(".experienceItemContent")
 const experienceDescription = document.querySelectorAll(".experienceDescription")
 
+const toggleExperienceItem = (item, index) => {
+    const info = experienceDescription[index]
+    const svg = item.querySelector("svg")
 
+    if (info.style.display === "block") {
+        info.style.display = "none"
+        svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />`
+    } else {
+        info.style.display = "block"
+        svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>`
+    }
+}
 
 experienceTitle.forEach((item, index) =>
+    item.addEventListener("click", () => toggleExperienceItem(item, index)))
 
-    item.addEventListener("click", (e) => {
-        const info = experienceDescription[index]
-        const svg = item.querySelector("svg")
-        const title = item.querySelector("h4")
 
-        if (info.style.display === "block") {
-            info.style.display = "none"
-            svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />`
-        } else {
-            info.style.display = "block"
-            svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>`
-        }
+// Projects
 
+import { workPortfolio } from "./data.js"
+
+const projects = document.querySelector(".projectReferences")
+const projectInfo = document.querySelector(".projectInfo")
+const projectLeftHead = document.querySelector(".projectLeftHead")
+const projectRight = document.querySelector(".projectRight")
+
+// Generate reference project divs
+
+workPortfolio.forEach(obj => {
+    projects.innerHTML += `
+        <div class="projectImgContainer">
+        <img class="projectImg" src="${obj.img}" alt="image of project page">
+         <div class="overlay">
+         <h3>${obj.name}</h3>
+        </div>
+        </div>
+        `
+}
+)
+
+const projectImage = document.querySelectorAll(".projectImgContainer")
+const projectNumber = projectLeftHead.querySelector("h3")
+const image = projectRight.querySelector("img")
+const projectDetails = document.querySelector(".detailsText")
+const projectSection =document.getElementById("projects")
+
+// Open project info div
+let currentIndex = 0;
+
+const openProject = (index) => {
+    currentIndex = index
+    const project = workPortfolio[currentIndex]
+    projectNumber.textContent = `Project #${project.id + 1}`;
+    projectDetails.innerHTML = `
+                <h2 class="projectTitle">${project.name}</h2>
+                                <p class="detailsPara"><strong>Developed with: </strong>${project.type}</p>
+                                <p class="detailsPara"><strong>Description: </strong>${project.description}</p>
+                                <p class="detailsPara"><strong>Date: </strong>${project.date}</p>
+                                <p class="detailsPara"><strong>Status: </strong>${project.status}</p>
+                `;
+
+    image.src = `${project.img}`;
+
+    projectInfo.classList.add("active")
+
+    projectSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
+}
+
+projectImage.forEach((img, index) =>
+    img.addEventListener("click", () => {
+        openProject(index)
     }))
 
+// check it out button
 
-    // Projects
+const checkButton = document.querySelector(".check")
+checkButton.addEventListener("click", () => {
+    const project = workPortfolio[currentIndex]
+    checkButton.href = `${project.link}`
+})
+// right and left button
 
-    import {workPortfolio} from "./data.js"
+const buttonLeft = document.querySelector(".btnToLeft")
+const buttonRight = document.querySelector(".btnToRight")
 
-    const projects = document.querySelector(".projectReferences")
+buttonRight.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % workPortfolio.length;
+    openProject(currentIndex);
+});
 
-    projects.textContent = `
-    <a href="${workPortfolio}"><img src="${workPortfolio.img}" alt=""></a>
-    `
-    
+buttonLeft.addEventListener("click", () => {
+    currentIndex =
+        (currentIndex - 1 + workPortfolio.length) % workPortfolio.length;
+    openProject(currentIndex);
+});
+// close project info div
+
+
+const closeButton = document.querySelector(".projectCrossMark")
+closeButton.addEventListener("click", () => {
+    projectInfo.classList.remove("active");
+    projectSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
+})
+
+
