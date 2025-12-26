@@ -166,23 +166,9 @@ projectImg.forEach((img, index) => img.addEventListener("click", () => {
 
     const buttonLeft = document.querySelector(".btnToLeft")
     const buttonRight = document.querySelector(".btnToRight")
-    const nextProject= project +1
+ 
     buttonRight.addEventListener("click", () => {
-        projectNr.textContent = `Project #${nextProject.id}`;
-    projDetails.innerHTML = `
-                <h2 class="projectTitle">${nextProject.name}</h2>
-                                <p class="detailsPara"><strong>Developed with: </strong>${nextProject.type}</p>
-                                <p class="detailsPara"><strong>Description: </strong>${nextProject.description}</p>
-                                <p class="detailsPara"><strong>Date: </strong>${nextProject.date}</p>
-                                <p class="detailsPara"><strong>Status: </strong>${nextProject.status}</p>
-                `;
-
-    image.src = `${nextProject.img}`;
-
-    const checkButton = document.querySelector(".check")
-    checkButton.addEventListener("click", () => {
-        checkButton.href = `${nextProject.link}`
-    })
+        
     })
 }))
 

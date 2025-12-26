@@ -593,6 +593,7 @@ section {
     display: flex;
     justify-content: center;
     margin-bottom: 4rem;
+    flex-wrap: wrap;
 }
 
 .projectBtns button {
@@ -764,17 +765,22 @@ footer {
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 4rem;
+    text-align: center;
+    margin-top: 3.5rem;
     margin-bottom: 5rem;
+    margin-left: 9rem;
 }
 
-.contactLeft h1 {
-    font-size: 3rem;
+.contactTitle{
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: .5rem;
 }
 
-.contactLeft h2 {
-    font-weight: 400;
+.contactMessage {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
 }
 
 .contactRight {
@@ -788,7 +794,7 @@ footer {
 .contactRight p {
     padding-bottom: 1rem;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .contactRight a {
@@ -798,9 +804,36 @@ footer {
     color: var(--color-text);
 }
 
-.contactRight svg {
-    width: 2rem;
-    height: 2rem;
+.contactIcon{
+    width: 2.5rem;
+    height: 2.5rem;
     fill: white;
     margin-right: .5rem;
+}
+
+.contactMailIcon{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: .5rem;
+}
+
+@media screen and (max-width:830px) {
+    footer{
+        display: block;
+        padding-bottom: 2rem;
+    }
+    .contactLeft{
+        margin-bottom: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    .contactRight{
+        margin-left: 2.3rem;
+       justify-content: flex-end;
+    }
+    .contactRight a{
+        font-size: 1.5rem;
+        margin-left: .7rem;
+    }
 }
