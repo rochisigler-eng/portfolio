@@ -45,7 +45,7 @@ section {
 }
 
 .navBar {
-    /* position: fixed; */
+    position: relative;
     top: 0;
     left: 0;
     display: flex;
@@ -200,7 +200,7 @@ section {
     min-width: 350px;
     min-width: 250px;
     top: 246px;
-    right: -25vw;
+    right: 25vw;
     border-radius: 764px;
     background: rgba(25, 55, 109, 0.7);
     filter: blur(100px);
@@ -588,7 +588,9 @@ section {
     .experienceMobile {
         display: block;
     }
-
+    .educationItem{
+        opacity: 1;
+    }
     .experienceItemContent {
         display: block;
         margin-bottom: 1rem;
@@ -839,7 +841,7 @@ footer {
     text-align: center;
     margin-top: 3.5rem;
     margin-bottom: 5rem;
-    margin-left: 9rem;
+    margin-left: 6rem;
 }
 
 .contactTitle {

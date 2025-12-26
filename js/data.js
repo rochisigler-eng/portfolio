@@ -64,7 +64,7 @@ export const workPortfolio = [
     type:"html",
     name: "Captivate Landing",
     img: "assets/projects/html_css/captivate.png",
-    link: "https://app.netlify.com/projects/captivate-rs/overview",
+    link: "https://captivate-rs.netlify.app/",
     status: "Completed",
     description: "Creating landing pages. Practising HTML & CSS. Some of my first works.",
     date: "5/25/2025"
@@ -158,7 +158,7 @@ const workPortfolioEsp = [
     type:"html",
     name: "Captivate Landing",
     img: "assets/projects/html_css/captivate.png",
-    link: "https://app.netlify.com/projects/captivate-rs/overview",
+    link: "https://captivate-rs.netlify.app/",
     status: "Completed",
     description: " Creación de landing pages. Práctica de HTML y CSS.",
     date: "5/25/2025"

@@ -164,7 +164,7 @@ workPortfolio.forEach(obj => {
 }
 )
 
-const projectImage = document.querySelectorAll(".projectImg")
+const projectImage = document.querySelectorAll(".projectImgContainer")
 const projectNumber = projectLeftHead.querySelector("h3")
 const image = projectRight.querySelector("img")
 const projectDetails = document.querySelector(".detailsText")
