@@ -21,7 +21,7 @@ const heroTitle = document.querySelector(".heroTitle")
 
 const str = `Hi!
 My name is Rochi,
-frontend developer
+Front-End Developer
 and this is my work...`
 let i = 0;
 const typingEffect = () => {

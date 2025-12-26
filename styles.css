@@ -45,15 +45,18 @@ section {
 }
 
 .navBar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 61px;
-    z-index: 2;
-    margin: 0 10%;
-}
 
+    width: 100%;                 /* 🔴 importante */
+    padding: 61px 10%;           /* mantiene el diseño */
+    z-index: 1000;
+}
 .navTitle {
     font-size: 30px;
     font-weight: 600;
@@ -204,11 +207,12 @@ section {
 
 @media screen and (max-width: 830px) {
     .heroContainer {
+        margin-top: 7rem;
         flex-direction: column-reverse;
     }
 
-    .heroContent {
-        align-items: center;
+    .heroTitle{
+        margin-left: 0;
     }
 }
 
