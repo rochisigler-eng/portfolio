@@ -130,6 +130,8 @@ const projectInfo = document.querySelector(".projectInfo")
 const projLeftHead = document.querySelector(".projectLeftHead")
 const projectRight = document.querySelector(".projectRight")
 
+// Generate reference project divs
+
 workPortfolio.forEach(obj => {
     projects.innerHTML += `
         <div class="projectImgContainer">
@@ -147,10 +149,10 @@ const projectNr = projLeftHead.querySelector("h3")
 const image = projectRight.querySelector("img")
 const projDetails = document.querySelector(".detailsText")
 
+// Open project info div
 
-projectImg.forEach((img, index) => img.addEventListener("click", () => {
-    let project = workPortfolio[index]
-
+const openProject = (index) => {
+    const project = workPortfolio[index]
     projectNr.textContent = `Project #${project.id}`;
     projDetails.innerHTML = `
                 <h2 class="projectTitle">${project.name}</h2>
@@ -168,28 +170,36 @@ projectImg.forEach((img, index) => img.addEventListener("click", () => {
         behavior: "smooth",
         block: "start"
     })
+}
 
-    const checkButton = document.querySelector(".check")
-    checkButton.addEventListener("click", () => {
-        checkButton.href = `${project.link}`
-    })
+projectImg.forEach((img, index) =>
+    img.addEventListener("click", () => {
+        openProject(index)
+    }))
 
-    const buttonLeft = document.querySelector(".btnToLeft")
-    const buttonRight = document.querySelector(".btnToRight")
+// check it out button
 
-    buttonRight.addEventListener("click", () => {
+const checkButton = document.querySelector(".check")
+checkButton.addEventListener("click", () => {
+    const project = workPortfolio[index]
+    checkButton.href = `${project.link}`
+})
+// right and left button
 
-    })
-}))
+const buttonLeft = document.querySelector(".btnToLeft")
+const buttonRight = document.querySelector(".btnToRight")
+
+buttonRight.addEventListener("click", () => {
+
+})
+// close project info div
 
 const closeBtn = document.querySelector(".projectCrossMark")
 closeBtn.addEventListener("click", () => {
     projectInfo.style.display = "none"
 })
 
-const projectInfoImg = document.querySelector("projectRight img")
-
-
+// const projectInfoImg = document.querySelector("projectRight img")
 
 // const projectBtns=document.querySelectorAll(".projectBtns")
 
