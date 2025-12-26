@@ -144,7 +144,7 @@ const projDetails = document.querySelector(".detailsText")
 
 
 projectImg.forEach((img, index) => img.addEventListener("click", () => {
-    let project = workPortfolio[index + 1]
+    let project = workPortfolio[index]
    
     projectNr.textContent = `Project #${project.id}`;
     projDetails.innerHTML = `
