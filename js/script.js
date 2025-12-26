@@ -132,7 +132,12 @@ const projectRight = document.querySelector(".projectRight")
 
 workPortfolio.forEach(obj => {
     projects.innerHTML += `
+        <div class="projectImgContainer">
         <img class="projectImg" src="${obj.img}" alt="image of project page">
+         <div class="overlay">
+         <h3>${obj.name}</h3>
+        </div>
+        </div>
         `
 }
 )
@@ -145,7 +150,7 @@ const projDetails = document.querySelector(".detailsText")
 
 projectImg.forEach((img, index) => img.addEventListener("click", () => {
     let project = workPortfolio[index]
-  
+
     projectNr.textContent = `Project #${project.id}`;
     projDetails.innerHTML = `
                 <h2 class="projectTitle">${project.name}</h2>
@@ -159,8 +164,8 @@ projectImg.forEach((img, index) => img.addEventListener("click", () => {
 
     projectInfo.classList.add("active")
 
-      projectInfo.scrollIntoView({
-        behavior:"smooth",
+    projectInfo.scrollIntoView({
+        behavior: "smooth",
         block: "start"
     })
 
@@ -171,9 +176,9 @@ projectImg.forEach((img, index) => img.addEventListener("click", () => {
 
     const buttonLeft = document.querySelector(".btnToLeft")
     const buttonRight = document.querySelector(".btnToRight")
- 
+
     buttonRight.addEventListener("click", () => {
-        
+
     })
 }))
 
