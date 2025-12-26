@@ -62,7 +62,9 @@ const educationContainer = document.querySelector(".educationContent")
 const educationItem = document.querySelectorAll(".educationItem")
 const upButton = document.querySelector(".linkUp")
 const downButton = document.querySelector(".linkDown");
-
+const progressBar = document.querySelector(".progressBar")
+let currentStep = 0;
+const totalSteps = 3;
 
 const showEducationItems = (entries) => {
     entries.forEach((entry) => {
@@ -78,13 +80,30 @@ const showEducationItems = (entries) => {
 
 const options = {
     root: educationContainer,
-    threshold: 1.0
+    threshold: 0.9,
+    rootMargin: "0px 0px -1px 0px"
 };
 
 const observer = new IntersectionObserver(showEducationItems, options);
 
 educationItem.forEach(item => observer.observe(item));
 
+const updateProgressBar = () => {
+    const progress = (currentStep / totalSteps) * 100;
+    progressBar.style.width = `${progress}%`;
+}
+const nextStep = () => {
+     if (currentStep < totalSteps) {
+        currentStep++;
+        updateProgressBar();
+    }
+};
+const prevStep = () => {
+    if (currentStep > 0) {
+        currentStep--;
+        updateProgressBar();
+    }
+};
 const scrollDown = () => {
     educationContainer.scrollBy(0, 250)
 }
@@ -93,10 +112,12 @@ const scrollUp = () => {
 }
 upButton.addEventListener("click", () => {
     scrollUp()
+    prevStep()
 })
 
 downButton.addEventListener("click", () => {
     scrollDown()
+    nextStep()
 })
 
 // Experience
@@ -152,9 +173,9 @@ const projectDetails = document.querySelector(".detailsText")
 let currentIndex = 0;
 
 const openProject = (index) => {
-    currentIndex=index
+    currentIndex = index
     const project = workPortfolio[currentIndex]
-    projectNumber.textContent = `Project #${project.id+1}`;
+    projectNumber.textContent = `Project #${project.id + 1}`;
     projectDetails.innerHTML = `
                 <h2 class="projectTitle">${project.name}</h2>
                                 <p class="detailsPara"><strong>Developed with: </strong>${project.type}</p>
