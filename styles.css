@@ -48,13 +48,11 @@ section {
     position: fixed;
     top: 0;
     left: 0;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    width: 100%;                 /* 🔴 importante */
-    padding: 61px 10%;           /* mantiene el diseño */
+    width: 100%;                 
+    padding: 61px 10%;           
     z-index: 1000;
 }
 .navTitle {
@@ -88,6 +86,8 @@ section {
     .navBar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-dark);
+        padding: 45px 10%; 
     }
 
     .menu {
