@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const educationContainer = document.querySelector(".educationContainer")
 const educationItem = document.querySelectorAll(".educationItem")
-const upBtn = document.querySelector(".linkUp")
-const downBtn = document.querySelector(".linkDown");
+const upButton = document.querySelector(".linkUp")
+const downButton = document.querySelector(".linkDown");
 
 
 const showEducationItems = (entries) => {
@@ -91,11 +91,11 @@ const scrollDown = () => {
 const scrollUp = () => {
     educationContainer.scrollBy(0, -250)
 }
-upBtn.addEventListener("click", () => {
+upButton.addEventListener("click", () => {
     scrollUp()
 })
 
-downBtn.addEventListener("click", () => {
+downButton.addEventListener("click", () => {
     scrollDown()
 })
 
@@ -126,7 +126,7 @@ import { workPortfolio } from "./data.js"
 
 const projects = document.querySelector(".projectReferences")
 const projectInfo = document.querySelector(".projectInfo")
-const projLeftHead = document.querySelector(".projectLeftHead")
+const projectLeftHead = document.querySelector(".projectLeftHead")
 const projectRight = document.querySelector(".projectRight")
 
 // Generate reference project divs
@@ -143,17 +143,17 @@ workPortfolio.forEach(obj => {
 }
 )
 
-const projectImg = document.querySelectorAll(".projectImg")
-const projectNr = projLeftHead.querySelector("h3")
+const projectImage = document.querySelectorAll(".projectImg")
+const projectNumber = projectLeftHead.querySelector("h3")
 const image = projectRight.querySelector("img")
-const projDetails = document.querySelector(".detailsText")
+const projectDetails = document.querySelector(".detailsText")
 
 // Open project info div
 
 const openProject = (index) => {
     const project = workPortfolio[index]
-    projectNr.textContent = `Project #${project.id}`;
-    projDetails.innerHTML = `
+    projectNumber.textContent = `Project #${project.id}`;
+    projectDetails.innerHTML = `
                 <h2 class="projectTitle">${project.name}</h2>
                                 <p class="detailsPara"><strong>Developed with: </strong>${project.type}</p>
                                 <p class="detailsPara"><strong>Description: </strong>${project.description}</p>
@@ -171,7 +171,7 @@ const openProject = (index) => {
     })
 }
 
-projectImg.forEach((img, index) =>
+projectImage.forEach((img, index) =>
     img.addEventListener("click", () => {
         openProject(index)
     }))
@@ -193,8 +193,8 @@ buttonRight.addEventListener("click", () => {
 })
 // close project info div
 
-const closeBtn = document.querySelector(".projectCrossMark")
-closeBtn.addEventListener("click", () => {
+const closeButton = document.querySelector(".projectCrossMark")
+closeButton.addEventListener("click", () => {
     projectInfo.style.display = "none"
 })
 
