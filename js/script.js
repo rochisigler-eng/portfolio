@@ -2,8 +2,8 @@ const menuBtn = document.querySelector(".menuBtn")
 const menuList = document.querySelector(".menuItems")
 
 let menuOpen = false;
-const toggleMenu=()=>{
- if (!menuOpen) {
+const toggleMenu = () => {
+    if (!menuOpen) {
         menuBtn.src = "assets/nav/closeIcon.png"
         menuList.style.display = "flex"
         menuOpen = true;
@@ -103,24 +103,21 @@ downBtn.addEventListener("click", () => {
 const experienceTitle = document.querySelectorAll(".experienceItemContent")
 const experienceDescription = document.querySelectorAll(".experienceDescription")
 
+const toggleExperienceItem = (item, index) => {
+    const info = experienceDescription[index]
+    const svg = item.querySelector("svg")
 
+    if (info.style.display === "block") {
+        info.style.display = "none"
+        svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />`
+    } else {
+        info.style.display = "block"
+        svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>`
+    }
+}
 
 experienceTitle.forEach((item, index) =>
-
-    item.addEventListener("click", (e) => {
-        const info = experienceDescription[index]
-        const svg = item.querySelector("svg")
-        const title = item.querySelector("h4")
-
-        if (info.style.display === "block") {
-            info.style.display = "none"
-            svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />`
-        } else {
-            info.style.display = "block"
-            svg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>`
-        }
-
-    }))
+    item.addEventListener("click", () => toggleExperienceItem(item, index)))
 
 
 // Projects
