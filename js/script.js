@@ -4,11 +4,11 @@ const menuList = document.querySelector(".menuItems")
 let menuOpen = false;
 const toggleMenu = () => {
     if (!menuOpen) {
-        menuBtn.src = "assets/nav/closeIcon.png"
+        menuButton.src = "assets/nav/closeIcon.png"
         menuList.style.display = "flex"
         menuOpen = true;
     } else {
-        menuBtn.src = "assets/nav/menuIcon.png"
+        menuButton.src = "assets/nav/menuIcon.png"
         menuList.style.display = "none"
         menuOpen = false;
     }
