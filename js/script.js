@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // Education
 
-const educationContainer = document.querySelector(".educationContainer")
+const educationContainer = document.querySelector(".educationContent")
 const educationItem = document.querySelectorAll(".educationItem")
 const upButton = document.querySelector(".linkUp")
 const downButton = document.querySelector(".linkDown");
