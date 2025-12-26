@@ -38,11 +38,12 @@ section {
 }
 
 @media screen and (max-width:830px) {
-    section{
+    section {
         margin-right: 3%;
         margin-left: 3%;
     }
 }
+
 .navBar {
     position: relative;
     display: flex;
@@ -509,6 +510,7 @@ section {
     .educationItem h4 {
         padding-bottom: .1rem;
     }
+
     .educationStudiesPara {
         font-weight: 200;
     }
@@ -540,10 +542,12 @@ section {
     display: flex;
     align-items: flex-end;
 }
-.experienceYear{
+
+.experienceYear {
     font-size: 1.5rem;
     padding-right: .8rem;
 }
+
 .experienceColorTitle {
     color: var(--color-dogerBlue);
     margin-left: 10px;
@@ -558,22 +562,26 @@ section {
 .experienceItemContent:hover {
     cursor: pointer;
 }
-.experienceMobile{
+
+.experienceMobile {
     display: none;
 }
 
 @media screen and (max-width:830px) {
-    .experienceContainerDesktop{
+    .experienceContainerDesktop {
         display: none;
     }
-    .experienceMobile{
+
+    .experienceMobile {
         display: block;
     }
-    .experienceItemContent{
+
+    .experienceItemContent {
         display: block;
         margin-bottom: 1rem;
     }
-    .experienceJob{
+
+    .experienceJob {
         display: flex;
     }
 }
@@ -620,6 +628,7 @@ section {
     justify-content: space-between;
     margin-bottom: 2rem;
     margin-right: 1.3rem;
+    margin-top: 2rem;
 }
 
 .projectLeftHead h3 {
@@ -634,8 +643,11 @@ section {
     background-color: var(--color-dogerBlue);
     border: none;
     margin-left: .2rem;
+    cursor: pointer;
 }
-
+.projectBtnsHeader button:hover{
+    background-color: var(--color-five);
+}
 .projectBtnsHeader svg {
     width: 1.4rem;
     color: white;
@@ -646,27 +658,40 @@ section {
     margin-bottom: 2rem;
 }
 
-.detailsText p {
+.detailsPara{
     margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.detailsPara strong{
+    font-weight: 800;
+}
+.projectTitle {
+    margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
-.detailsText h1 {
-    margin-bottom: .5rem;
-}
 
-.projectDetails a{
+.check {
+    display: inline-block;
     border-radius: 10px;
-    width: 9rem;
-    height: 5rem;
     font-size: 1.3rem;
+    padding: .5rem;
     background-color: #c82fff;
     color: var(--color-text);
     border: none;
     text-decoration: none;
+    transition: transform 0.3s ease;
 }
-
+.check:hover{
+    background-color: white;
+    color: var(--color-five);
+    border: 1px solid var(--color-five);
+    transform: scale(1.1);
+}
 .projectRight img {
     width: 100%;
+    border: 3px solid var(--color-dogerBlue);
 }
 
 .projectRight img:hover {

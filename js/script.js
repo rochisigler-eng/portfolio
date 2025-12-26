@@ -142,38 +142,59 @@ const projectNr = projLeftHead.querySelector("h3")
 const image = projectRight.querySelector("img")
 const projDetails = document.querySelector(".detailsText")
 
+
 projectImg.forEach((img, index) => img.addEventListener("click", () => {
-    const project = workPortfolio[index]
+    let project = workPortfolio[index + 1]
+   
     projectNr.textContent = `Project #${project.id}`;
     projDetails.innerHTML = `
-                <h1>${project.name}</h1>
-                                <p><strong>Developed with: </strong>${project.type}</p>
-                                <p><strong>Description: </strong>${project.description}</p>
-                                <p><strong>Date: </strong>${project.date}</p>
-                                <p><strong>Status: </strong>${project.status}</p>
+                <h2 class="projectTitle">${project.name}</h2>
+                                <p class="detailsPara"><strong>Developed with: </strong>${project.type}</p>
+                                <p class="detailsPara"><strong>Description: </strong>${project.description}</p>
+                                <p class="detailsPara"><strong>Date: </strong>${project.date}</p>
+                                <p class="detailsPara"><strong>Status: </strong>${project.status}</p>
                 `;
 
     image.src = `${project.img}`;
 
     projectInfo.style.display = "flex"
 
-}
-))
+    const checkButton = document.querySelector(".check")
+    checkButton.addEventListener("click", () => {
+        checkButton.href = `${project.link}`
+    })
 
-const closeBtn=document.querySelector(".projectCrossMark")
-closeBtn.addEventListener("click",()=>{
-    projectInfo.style.display="none"
+    const buttonLeft = document.querySelector(".btnToLeft")
+    const buttonRight = document.querySelector(".btnToRight")
+    const nextProject= project +1
+    buttonRight.addEventListener("click", () => {
+        projectNr.textContent = `Project #${nextProject.id}`;
+    projDetails.innerHTML = `
+                <h2 class="projectTitle">${nextProject.name}</h2>
+                                <p class="detailsPara"><strong>Developed with: </strong>${nextProject.type}</p>
+                                <p class="detailsPara"><strong>Description: </strong>${nextProject.description}</p>
+                                <p class="detailsPara"><strong>Date: </strong>${nextProject.date}</p>
+                                <p class="detailsPara"><strong>Status: </strong>${nextProject.status}</p>
+                `;
+
+    image.src = `${nextProject.img}`;
+
+    const checkButton = document.querySelector(".check")
+    checkButton.addEventListener("click", () => {
+        checkButton.href = `${nextProject.link}`
+    })
+    })
+}))
+
+const closeBtn = document.querySelector(".projectCrossMark")
+closeBtn.addEventListener("click", () => {
+    projectInfo.style.display = "none"
 })
 
 const projectInfoImg = document.querySelector("projectRight img")
 
 
-const checkBtn=document.querySelector(".check")
-checkBtn.addEventListener("click",()=>{
-    workPortfolio.forEach(obj=> {
-        checkBtn.href = `${obj.link}`
-    })
-})
+
 // const projectBtns=document.querySelectorAll(".projectBtns")
 
 // projectBtns.forEach(btn=> btn.addEventListener("click",()=>{
