@@ -149,10 +149,12 @@ const image = projectRight.querySelector("img")
 const projectDetails = document.querySelector(".detailsText")
 
 // Open project info div
+let currentIndex = 0;
 
 const openProject = (index) => {
-    const project = workPortfolio[index]
-    projectNumber.textContent = `Project #${project.id}`;
+    currentIndex=index
+    const project = workPortfolio[currentIndex]
+    projectNumber.textContent = `Project #${project.id+1}`;
     projectDetails.innerHTML = `
                 <h2 class="projectTitle">${project.name}</h2>
                                 <p class="detailsPara"><strong>Developed with: </strong>${project.type}</p>
@@ -180,7 +182,7 @@ projectImage.forEach((img, index) =>
 
 const checkButton = document.querySelector(".check")
 checkButton.addEventListener("click", () => {
-    const project = workPortfolio[index]
+    const project = workPortfolio[currentIndex]
     checkButton.href = `${project.link}`
 })
 // right and left button
@@ -189,13 +191,20 @@ const buttonLeft = document.querySelector(".btnToLeft")
 const buttonRight = document.querySelector(".btnToRight")
 
 buttonRight.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % workPortfolio.length;
+    openProject(currentIndex);
+});
 
-})
+buttonLeft.addEventListener("click", () => {
+    currentIndex =
+        (currentIndex - 1 + workPortfolio.length) % workPortfolio.length;
+    openProject(currentIndex);
+});
 // close project info div
 
 const closeButton = document.querySelector(".projectCrossMark")
 closeButton.addEventListener("click", () => {
-    projectInfo.style.display = "none"
+    projectInfo.classList.remove("active");
 })
 
 
