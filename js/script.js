@@ -168,6 +168,7 @@ const projectImage = document.querySelectorAll(".projectImg")
 const projectNumber = projectLeftHead.querySelector("h3")
 const image = projectRight.querySelector("img")
 const projectDetails = document.querySelector(".detailsText")
+const projectSection =document.getElementById("projects")
 
 // Open project info div
 let currentIndex = 0;
@@ -188,7 +189,7 @@ const openProject = (index) => {
 
     projectInfo.classList.add("active")
 
-    projectInfo.scrollIntoView({
+    projectSection.scrollIntoView({
         behavior: "smooth",
         block: "start"
     })
@@ -223,10 +224,11 @@ buttonLeft.addEventListener("click", () => {
 });
 // close project info div
 
+
 const closeButton = document.querySelector(".projectCrossMark")
 closeButton.addEventListener("click", () => {
     projectInfo.classList.remove("active");
-    projects.scrollIntoView({
+    projectSection.scrollIntoView({
         behavior: "smooth",
         block: "start"
     })
