@@ -145,7 +145,7 @@ const projDetails = document.querySelector(".detailsText")
 
 projectImg.forEach((img, index) => img.addEventListener("click", () => {
     let project = workPortfolio[index]
-   
+  
     projectNr.textContent = `Project #${project.id}`;
     projDetails.innerHTML = `
                 <h2 class="projectTitle">${project.name}</h2>
@@ -158,6 +158,11 @@ projectImg.forEach((img, index) => img.addEventListener("click", () => {
     image.src = `${project.img}`;
 
     projectInfo.style.display = "flex"
+
+      projectInfo.scrollIntoView({
+        behavior:"smooth",
+        block: "start"
+    })
 
     const checkButton = document.querySelector(".check")
     checkButton.addEventListener("click", () => {

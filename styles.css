@@ -692,6 +692,7 @@ section {
 }
 .projectRight img {
     width: 100%;
+    height: 100%;
     border: 3px solid var(--color-dogerBlue);
 }
 
@@ -718,17 +719,17 @@ section {
 .projectReferences {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
 
-.projectReferences img {
+.projectImg {
     width: 95%;
     height: 95%;
     border-radius: 10px;
     border: 1px solid var(--color-dogerBlue);
     cursor: pointer;
-
 }
 
 .pageBtns {
