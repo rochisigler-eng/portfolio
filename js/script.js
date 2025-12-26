@@ -2,8 +2,8 @@ const menuBtn = document.querySelector(".menuBtn")
 const menuList = document.querySelector(".menuItems")
 
 let menuOpen = false;
-menuBtn.addEventListener("click", () => {
-    if (!menuOpen) {
+const toggleMenu=()=>{
+ if (!menuOpen) {
         menuBtn.src = "assets/nav/closeIcon.png"
         menuList.style.display = "flex"
         menuOpen = true;
@@ -12,7 +12,9 @@ menuBtn.addEventListener("click", () => {
         menuList.style.display = "none"
         menuOpen = false;
     }
-
+}
+menuBtn.addEventListener("click", () => {
+    toggleMenu();
 })
 
 // Hero
@@ -199,15 +201,4 @@ closeBtn.addEventListener("click", () => {
     projectInfo.style.display = "none"
 })
 
-// const projectInfoImg = document.querySelector("projectRight img")
 
-// const projectBtns=document.querySelectorAll(".projectBtns")
-
-// projectBtns.forEach(btn=> btn.addEventListener("click",()=>{
-//     workPortfolio.forEach(obj =>{
-//         if(btn.value==="React"){
-//             projectImg.filter(img=> img==="React")
-//         } else if (btn.value ==="")
-
-//     })
-// }))
