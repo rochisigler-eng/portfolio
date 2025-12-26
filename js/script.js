@@ -157,7 +157,7 @@ projectImg.forEach((img, index) => img.addEventListener("click", () => {
 
     image.src = `${project.img}`;
 
-    projectInfo.style.display = "flex"
+    projectInfo.classList.add("active")
 
       projectInfo.scrollIntoView({
         behavior:"smooth",

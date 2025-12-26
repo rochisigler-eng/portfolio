@@ -615,13 +615,15 @@ section {
     display: none;
     margin-bottom: 4rem;
 }
-
+.projectInfo.active{
+    display: flex;
+}
 .projectLeft {
-    width: 50%;
+    width: 100%;
 }
 
 .projectRight {
-    width: 50%;
+    width: 100%;
 }
 
 .projectLeftHead {
@@ -752,6 +754,18 @@ section {
     background-color: var(--color-dogerBlue);
     color: var(--color-text);
     border: none;
+}
+
+@media screen and (max-width:830px) {
+    .projectReferences {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        margin: 1rem;
+    }
+    .projectInfo.active{
+        display: block;
+    }
+
 }
 
 /* Footer */
