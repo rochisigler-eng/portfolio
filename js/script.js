@@ -226,6 +226,10 @@ buttonLeft.addEventListener("click", () => {
 const closeButton = document.querySelector(".projectCrossMark")
 closeButton.addEventListener("click", () => {
     projectInfo.classList.remove("active");
+    projects.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
 })
 
 
