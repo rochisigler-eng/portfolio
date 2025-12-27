@@ -211,7 +211,9 @@ section {
         margin-top: 7rem;
         flex-direction: column-reverse;
     }
-
+    .heroImg{
+        width: 70%;
+    }
     .heroTitle {
         margin-left: 0;
     }
