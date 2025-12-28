@@ -1,7 +1,7 @@
 export const workPortfolio = [
     {
     id:0,
-    type:"javascript",
+    type:"Javascript",
     name: "Sign Up Landing",
     img: "assets/projects/javascript/form_validation.png",
     link: "https://formulario-validado-javascript-rs.netlify.app/",
@@ -11,7 +11,7 @@ export const workPortfolio = [
     },
     {
     id:1,
-    type:"javascript",
+    type:"Javascript",
     name: "Pokedex",
     img: "assets/projects/javascript/pokedex.png",
     link: "https://pokedex-project-rs.netlify.app/",
@@ -21,7 +21,7 @@ export const workPortfolio = [
     },
     {
     id:2,
-    type:"javascript",
+    type:"Javascript",
     name: "Social Media",
     img: "assets/projects/javascript/red_social.png",
     link: "https://red-social-rs.netlify.app/",
@@ -31,7 +31,7 @@ export const workPortfolio = [
     },
     {
     id:3,
-    type:"javascript",
+    type:"Javascript",
     name: "Calculator App",
     img: "assets/projects/javascript/calculadora.png",
     link: "https://calculator-project-rs.netlify.app/",
@@ -41,7 +41,7 @@ export const workPortfolio = [
     },
     {
     id:4,
-    type:"javascript",
+    type:"Javascript",
     name: "Login",
     img: "assets/projects/javascript/login.png",
     link: "https://login-validado-con-javascript-rs.netlify.app/",
@@ -51,7 +51,7 @@ export const workPortfolio = [
     },
     {
     id:5,
-    type:"html",
+    type:"HTML & CSS",
     name: "Social Media Dashboard",
     img: "assets/projects/html_css/social_media.png",
     link: "https://social-media-rs.netlify.app/",
@@ -61,7 +61,7 @@ export const workPortfolio = [
     },
     {
     id:6,
-    type:"html",
+    type:"HTML & CSS",
     name: "Captivate Landing",
     img: "assets/projects/html_css/captivate.png",
     link: "https://captivate-rs.netlify.app/",
@@ -71,7 +71,7 @@ export const workPortfolio = [
     },
     {
     id:7,
-    type:"html",
+    type:"HTML & CSS",
     name: "City Skyline",
     img: "assets/projects/html_css/city_skyline.png",
     link: "https://city-skyline-rs.netlify.app/",
@@ -81,7 +81,7 @@ export const workPortfolio = [
     },
     {
     id:8,
-    type:"javascript",
+    type:"Javascript",
     name: "Markdown to HTML converter",
     img: "assets/projects/javascript/markdown.png",
     link: "https://html-markdown-rs.netlify.app/",
@@ -95,7 +95,7 @@ export const workPortfolio = [
 const workPortfolioEsp = [
     { 
     id:0,
-    type:"javascript",
+    type:"Javascript",
     name: "Sign Up Landing",
     img: "assets/projects/javascript/form_validation.png",
     link: "https://formulario-validado-javascript-rs.netlify.app/",
@@ -105,7 +105,7 @@ const workPortfolioEsp = [
     },
     {
     id:1,
-    type:"javascript",
+    type:"Javascript",
     name: "Pokedex",
     img: "assets/projects/javascript/pokedex.png",
     link: "https://pokedex-project-rs.netlify.app/",
@@ -115,7 +115,7 @@ const workPortfolioEsp = [
     },
     {
      id:2,
-    type:"javascript",
+    type:"Javascript",
     name: "Social Media",
     img: "assets/projects/javascript/red_social.png",
     link: "https://red-social-rs.netlify.app/",
@@ -125,7 +125,7 @@ const workPortfolioEsp = [
     },
     {
     id:3,
-    type:"javascript",
+    type:"Javascript",
     name: "Calculator App",
     img: "assets/projects/javascript/calculadora.png",
     link: "https://calculator-project-rs.netlify.app/",
@@ -135,7 +135,7 @@ const workPortfolioEsp = [
     },
      {
     id:4,
-    type:"javascript",
+    type:"Javascript",
     name: "Login",
     img: "assets/projects/javascript/login.png",
     link: "https://login-validado-con-javascript-rs.netlify.app/",
@@ -145,7 +145,7 @@ const workPortfolioEsp = [
     },
       {
     id:5,
-    type:"html",
+    type:"HTML & CSS",
     name: "Social Media Dashboard",
     img: "assets/projects/html_css/social_media.png",
     link: "https://social-media-rs.netlify.app/",
@@ -155,7 +155,7 @@ const workPortfolioEsp = [
     },
      {
     id:6,
-    type:"html",
+    type:"HTML & CSS",
     name: "Captivate Landing",
     img: "assets/projects/html_css/captivate.png",
     link: "https://captivate-rs.netlify.app/",
@@ -165,7 +165,7 @@ const workPortfolioEsp = [
     },
      {
     id:7,
-    type:"html",
+    type:"HTML & CSS",
     name: "City Skyline",
     img: "assets/projects/html_css/city_skyline.png",
     link: "https://city-skyline-rs.netlify.app/",
@@ -175,7 +175,7 @@ const workPortfolioEsp = [
     },
     {
     id:8,
-    type:"javascript",
+    type:"Javascript",
     name: "Markdown to HTML converter",
     img: "assets/projects/javascript/markdown.png",
     link: "https://html-markdown-rs.netlify.app/",
