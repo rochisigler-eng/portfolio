@@ -88,22 +88,6 @@ const observer = new IntersectionObserver(showEducationItems, options);
 
 educationItem.forEach(item => observer.observe(item));
 
-const updateProgressBar = () => {
-    const progress = (currentStep / totalSteps) * 100;
-    progressBar.style.width = `${progress}%`;
-}
-const nextStep = () => {
-     if (currentStep < totalSteps) {
-        currentStep++;
-        updateProgressBar();
-    }
-};
-const prevStep = () => {
-    if (currentStep > 0) {
-        currentStep--;
-        updateProgressBar();
-    }
-};
 const scrollDown = () => {
     educationContainer.scrollBy(0, 250)
 }
@@ -112,12 +96,10 @@ const scrollUp = () => {
 }
 upButton.addEventListener("click", () => {
     scrollUp()
-    prevStep()
 })
 
 downButton.addEventListener("click", () => {
     scrollDown()
-    nextStep()
 })
 
 // Experience
