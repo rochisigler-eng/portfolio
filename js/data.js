@@ -10,7 +10,7 @@ export const workPortfolio = [
         date: "01/02/2026"
     },
     {
-        id: 0,
+        id: 1,
         type: "React",
         name: "Shopping List Search App",
         img: "assets/projects/react/shopping-list-search.png",
@@ -20,7 +20,7 @@ export const workPortfolio = [
         date: "31/01/2026"
     },
     {
-        id: 0,
+        id: 2,
         type: "React",
         name: "Superhero Form App",
         img: "assets/projects/react/superhero.png",
@@ -30,7 +30,7 @@ export const workPortfolio = [
         date: "30/01/2026"
     },
     {
-        id: 0,
+        id: 3,
         type: "React",
         name: "Fruit Search App",
         img: "assets/projects/react/fuit-search.png",
@@ -40,7 +40,7 @@ export const workPortfolio = [
         date: "29/01/2026"
     },
     {
-        id: 0,
+        id: 4,
         type: "React",
         name: "Event RSVP Form App",
         img: "assets/projects/react/event-rsvp.png",
@@ -50,7 +50,7 @@ export const workPortfolio = [
         date: "28/01/2026"
     },
     {
-        id: 0,
+        id: 5,
         type: "React",
         name: "Currency Converter App",
         img: "assets/projects/react/currency-converter.png",
@@ -60,7 +60,7 @@ export const workPortfolio = [
         date: "27/01/2026"
     },
     {
-        id: 0,
+        id: 6,
         type: "Javascript",
         name: "Shopping Cart App",
         img: "assets/projects/javascript/shopping-cart.png",
@@ -70,7 +70,7 @@ export const workPortfolio = [
         date: "26/01/2026"
     },
     {
-        id: 0,
+        id: 7,
         type: "Javascript",
         name: "Recipe Ingredient Converter App",
         img: "assets/projects/javascript/recipe-converter.png",
@@ -80,7 +80,7 @@ export const workPortfolio = [
         date: "25/01/2026"
     },
     {
-        id: 0,
+        id: 8,
         type: "Javascript",
         name: "Music Player App",
         img: "assets/projects/javascript/music-player.png",
@@ -90,7 +90,7 @@ export const workPortfolio = [
         date: "24/01/2026"
     },
     {
-        id: 0,
+        id: 9,
         type: "Javascript",
         name: "Todo App",
         img: "assets/projects/javascript/todo.png",
@@ -100,7 +100,7 @@ export const workPortfolio = [
         date: "23/01/2026"
     },
     {
-        id: 0,
+        id: 10,
         type: "Javascript",
         name: "Drum Machine App",
         img: "assets/projects/javascript/drum-machine.png",
@@ -110,7 +110,7 @@ export const workPortfolio = [
         date: "22/01/2026"
     },
     {
-        id: 0,
+        id: 11,
         type: "Javascript",
         name: "Forum LeaderBoard App",
         img: "assets/projects/javascript/forum-leaderboard.png",
@@ -120,7 +120,7 @@ export const workPortfolio = [
         date: "21/01/2026"
     },
     {
-        id: 0,
+        id: 12,
         type: "Javascript",
         name: "fCC Authors Page",
         img: "assets/projects/javascript/authors-page.png",
@@ -130,7 +130,7 @@ export const workPortfolio = [
         date: "20/01/2026"
     },
     {
-        id: 0,
+        id: 13,
         type: "Javascript",
         name: "Complaint Form App",
         img: "assets/projects/javascript/complaint-form.png",
@@ -140,7 +140,7 @@ export const workPortfolio = [
         date: "31/12/2025"
     },
     {
-        id: 0,
+        id: 14,
         type: "Javascript",
         name: "Decimal to Binary App",
         img: "assets/projects/javascript/decimal-binary.png",
@@ -150,7 +150,7 @@ export const workPortfolio = [
         date: "8/1/2025"
     },
     {
-        id: 0,
+        id: 15,
         type: "Javascript",
         name: "BookMark Manager App",
         img: "assets/projects/javascript/bookmark-manager-app.png",
@@ -160,7 +160,7 @@ export const workPortfolio = [
         date: "5/1/2025"
     },
     {
-        id: 0,
+        id: 16,
         type: "Javascript",
         name: "Sign Up Landing",
         img: "assets/projects/javascript/form_validation.png",
@@ -170,7 +170,7 @@ export const workPortfolio = [
         date: "5/20/2025"
     },
     {
-        id: 1,
+        id: 17,
         type: "Javascript",
         name: "Pokedex",
         img: "assets/projects/javascript/pokedex.png",
@@ -180,7 +180,7 @@ export const workPortfolio = [
         date: "5/20/2025"
     },
     {
-        id: 2,
+        id: 18,
         type: "Javascript",
         name: "Social Media",
         img: "assets/projects/javascript/red_social.png",
@@ -190,7 +190,7 @@ export const workPortfolio = [
         date: "5/25/2025"
     },
     {
-        id: 3,
+        id: 19,
         type: "Javascript",
         name: "Calculator App",
         img: "assets/projects/javascript/calculadora.png",
@@ -200,7 +200,7 @@ export const workPortfolio = [
         date: "5/25/2025"
     },
     {
-        id: 4,
+        id: 20,
         type: "Javascript",
         name: "Login",
         img: "assets/projects/javascript/login.png",
@@ -210,7 +210,7 @@ export const workPortfolio = [
         date: "5/25/2025"
     },
     {
-        id: 5,
+        id: 21,
         type: "HTML & CSS",
         name: "Social Media Dashboard",
         img: "assets/projects/html_css/social_media.png",
@@ -220,7 +220,7 @@ export const workPortfolio = [
         date: "5/25/2025"
     },
     {
-        id: 6,
+        id: 22,
         type: "HTML & CSS",
         name: "Captivate Landing",
         img: "assets/projects/html_css/captivate.png",
@@ -230,7 +230,7 @@ export const workPortfolio = [
         date: "5/25/2025"
     },
     {
-        id: 7,
+        id: 23,
         type: "HTML & CSS",
         name: "City Skyline",
         img: "assets/projects/html_css/city_skyline.png",
@@ -240,7 +240,7 @@ export const workPortfolio = [
         date: "5/25/2025"
     },
     {
-        id: 8,
+        id: 24,
         type: "Javascript",
         name: "Markdown to HTML converter",
         img: "assets/projects/javascript/markdown.png",
