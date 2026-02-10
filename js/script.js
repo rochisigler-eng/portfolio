@@ -127,32 +127,58 @@ experienceTitle.forEach((item, index) =>
 
 import { workPortfolio } from "./data.js"
 
-const projects = document.querySelector(".projectReferences")
+const projectContainer = document.querySelector(".projectReferences")
 const projectInfo = document.querySelector(".projectInfo")
 const projectLeftHead = document.querySelector(".projectLeftHead")
 const projectRight = document.querySelector(".projectRight")
+const projectButtonsContainer = document.querySelector(".projectBtns")
+const projectButtons = document.querySelectorAll(".projectBtns button")
+const projectSection = document.getElementById("projects")
 
-// Generate reference project divs
 
-workPortfolio.forEach(obj => {
-    projects.innerHTML += `
-        <div class="projectImgContainer">
-        <img class="projectImg" src="${obj.img}" alt="image of project page">
-         <div class="overlay">
-         <h3>${obj.name}</h3>
-        </div>
-        </div>
-        `
+const displayProjects = (projects) => {
+    projects.forEach(obj => {
+        projectContainer.innerHTML += `
+            <div class="projectImgContainer" data-index="${obj.id}">
+            <img class="projectImg" src="${obj.img}" alt="image of project page">
+             <div class="overlay">
+             <h3>${obj.name}</h3>
+            </div>
+            </div>
+            `
+    }
+    )
 }
-)
+
+displayProjects(workPortfolio.slice(0,10))
+projectButtons[0].classList.add("active");
+
+projectButtonsContainer.addEventListener("click", (e) => {
+    if (e.target.tagName !== "BUTTON") return
+
+    projectButtons.forEach(button=> button.classList.remove("active"))
+    e.target.classList.add("active")
+
+    const page = Number(e.target.dataset.page)
+
+    const start = page * 10
+    const end = start + 10
+
+    projectContainer.innerHTML = ""
+    displayProjects(workPortfolio.slice(start, end))
+
+    projectSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
+})
 
 const projectImage = document.querySelectorAll(".projectImgContainer")
 const projectNumber = projectLeftHead.querySelector("h3")
 const image = projectRight.querySelector("img")
 const projectDetails = document.querySelector(".detailsText")
-const projectSection =document.getElementById("projects")
 
-// Open project info div
+
 let currentIndex = 0;
 
 const openProject = (index) => {
@@ -176,11 +202,13 @@ const openProject = (index) => {
         block: "start"
     })
 }
+projectContainer.addEventListener("click",(e)=>{
+    const projectCard= e.target.closest(".projectImgContainer")
+    if(!projectCard) return;
+    const index= Number(projectCard.dataset.index)
+    openProject(index)
+})
 
-projectImage.forEach((img, index) =>
-    img.addEventListener("click", () => {
-        openProject(index)
-    }))
 
 // check it out button
 
