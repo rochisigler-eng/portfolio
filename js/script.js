@@ -133,7 +133,8 @@ const projectLeftHead = document.querySelector(".projectLeftHead")
 const projectRight = document.querySelector(".projectRight")
 const projectButtonsContainer = document.querySelector(".projectBtns")
 const projectButtons = document.querySelectorAll(".projectBtns button")
-const projectSection = document.getElementById("projects")
+const projectSection = document.querySelector(".projects")
+
 
 
 const displayProjects = (projects) => {
@@ -151,6 +152,8 @@ const displayProjects = (projects) => {
 }
 
 displayProjects(workPortfolio.slice(0,10))
+
+
 projectButtons[0].classList.add("active");
 
 projectButtonsContainer.addEventListener("click", (e) => {
@@ -244,4 +247,8 @@ closeButton.addEventListener("click", () => {
     })
 })
 
+//back to top 
 
+const toTopButton = document.querySelector(".toTop")
+
+toTopButton.addEventListener("click",()=> window.scrollTo(0, 0))
