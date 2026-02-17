@@ -1,0 +1,23 @@
+.upContainer {
+    display: flex;
+    justify-content: flex-end;
+    .toTop {
+        padding: 1rem;
+        font-size: 1.5rem;
+        border: 1px solid $color-dogerBlue;
+        border-radius: 20px;
+        color: $color-text;
+        background-color: $color-dogerBlue;
+        margin: 2rem;
+        &:hover {
+            background-color: $color-five;
+            cursor: pointer;
+        }
+    }
+    @media (max-width: 830px) {
+        .toTop {
+           margin: 1rem;
+           font-size: 1rem;
+        }
+    }
+}

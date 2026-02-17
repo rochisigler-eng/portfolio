@@ -1,0 +1,82 @@
+footer {
+    background-color: $color-dark;
+    display: flex;
+    color: $color-text;
+
+    .contactLeft {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3.5rem;
+        margin-bottom: 5rem;
+        margin-left: 6rem;
+
+        .contactTitle {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: .5rem;
+        }
+
+        .contactMessage {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: .2rem;
+        }
+    }
+
+    .contactRight {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        p {
+            padding-bottom: 1rem;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        a {
+            text-decoration: none;
+            font-style: normal;
+            font-size: 1.5rem;
+            color: $color-text;
+        }
+
+        .contactIcon {
+            width: 2.5rem;
+            height: 2.5rem;
+            fill: white;
+            margin-right: .5rem;
+        }
+
+        .contactMailIcon {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: .5rem;
+        }
+    }
+
+    @media (max-width:830px) {
+        display: block;
+        padding-bottom: 2rem;
+       
+        .contactLeft {
+            margin-bottom: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contactRight {
+            margin-left: 2.3rem;
+            justify-content: flex-end;
+
+            a {
+                font-size: 1.5rem;
+                margin-left: .7rem;
+            }
+        }
+    }
+}

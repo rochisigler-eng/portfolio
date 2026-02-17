@@ -1,0 +1,218 @@
+.education {
+    display: block;
+
+    .educationContainer {
+        height: 620px;
+        display: flex;
+
+        .educationContent {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: $color-secondary;
+            border-radius: 0 0 30px 30px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            .educationLeft,
+            .educationRight {
+                width: 100%;
+            }
+
+            .educationLeft {
+                margin-top: 3rem;
+            }
+
+            .educationRight {
+                margin-top: 15rem;
+            }
+
+            .divider {
+                position: sticky;
+                top: 0;
+                border: 2px solid white;
+                height: 100%;
+            }
+
+            .educationItem {
+                position: relative;
+                background-color: white;
+                color: black;
+                border-radius: 10px;
+                padding: 2.5rem;
+                margin-bottom: 11rem;
+                margin-left: auto;
+                margin-right: auto;
+                width: 75%;
+                opacity: 0;
+                transform: translateY(10px);
+                transition: opacity .4s ease, transform .4s ease;
+
+                &.show {
+                    animation-name: fadeIn;
+                    animation-duration: 1.5s;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: forwards;
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+            }
+
+
+            .left::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: -101px;
+                border-radius: 50%;
+                background-color: $color-dogerBlue;
+                width: 1.3rem;
+                height: 1.3rem;
+                z-index: 2;
+            }
+
+            .right::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: -101px;
+                border-radius: 50%;
+                background-color: $color-four;
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+
+            .itemTitle {
+                display: flex;
+                align-items: flex-end;
+                padding-bottom: 15px;
+            }
+
+            .yearSpan {
+                font-weight: 800;
+                font-size: 1.6rem;
+                padding-right: .5rem;
+            }
+
+            .colorTitleLeft {
+                color: $color-dogerBlue;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+
+            .colorTitleRight {
+                color: $color-four;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+
+            .educationItem h4 {
+                padding-bottom: .5rem;
+            }
+
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+
+
+
+        .educationBtns {
+            position: sticky;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            background-color: $color-bg;
+
+            .linkUp {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            .linkUp svg {
+                width: 6rem;
+                height: 6rem;
+                color: $color-dogerBlue;
+            }
+
+            .linkDown {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            .linkDown svg {
+                width: 6rem;
+                height: 6rem;
+                color: $color-dogerBlue;
+            }
+        }
+
+
+    }
+    .mobileEducationContainer {
+        display: none;
+    }
+
+    @media (max-width:830px) {
+        margin-bottom: 4rem;
+        .educationContainer {
+            display: none;
+        }
+
+        .mobileEducationContainer {
+            display: block;
+
+            .mobileEducationItems {
+                .educationItem {
+                    background-color: transparent;
+                    margin-bottom: 1.3rem;
+                    width: 100%;
+                    padding: .5rem;
+                    color: $color-text;
+
+                    .itemTitle {
+                        display: block;
+                        padding-bottom: 5px;
+
+                        .yearSpan {
+                            font-weight: 800;
+                            font-size: 1.2rem;
+                            padding-right: 0rem;
+                        }
+
+                        .colorTitle {
+                            color: $color-dogerBlue;
+                        }
+
+                    }
+
+                    h4 {
+                        padding-bottom: .1rem;
+                    }
+
+                    .educationStudiesPara {
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+    }
+}

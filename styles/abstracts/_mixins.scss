@@ -1,0 +1,11 @@
+@mixin sectionLayout {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@mixin flexCenter($direction, $justify-content){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+    flex-direction: $direction;
+}

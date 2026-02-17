@@ -1,0 +1,233 @@
+.projects {
+    display: block;
+
+    .projectInfo {
+        display: none;
+        margin-bottom: 4rem;
+
+        &.active {
+            display: flex;
+        }
+
+        .projectLeft {
+            width: 100%;
+
+            .projectLeftHead {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+                margin-right: 1.3rem;
+                margin-top: 2rem;
+
+                h3 {
+                    color: $color-text;
+                    font-size: 1.5rem;
+                }
+
+                .projectBtnsHeader {
+                    button {
+                        width: 4rem;
+                        height: 2rem;
+                        border-radius: 5px;
+                        background-color: $color-dogerBlue;
+                        border: none;
+                        margin-left: .2rem;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $color-five;
+                        }
+
+                    }
+
+                    svg {
+                        width: 1.4rem;
+                        color: white;
+                    }
+                }
+            }
+
+            .projectDetails {
+                .detailsText {
+                    color: $color-text;
+                    margin-bottom: 2rem;
+
+                    .detailsPara {
+                        margin-bottom: .5rem;
+                        font-size: 1.2rem;
+                        font-weight: 200;
+
+                        strong {
+                            font-weight: 800;
+                        }
+                    }
+
+                    .projectTitle {
+                        margin-bottom: 1rem;
+                        font-size: 2rem;
+                    }
+                }
+
+                .check {
+                    display: inline-block;
+                    border-radius: 10px;
+                    font-size: 1.3rem;
+                    padding: .5rem;
+                    background-color: #c82fff;
+                    color: $color-text;
+                    border: none;
+                    text-decoration: none;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        background-color: white;
+                        color: $color-five;
+                        border: 1px solid $color-five;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+        }
+
+        .projectRight {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 28rem;
+                border: 3px solid $color-dogerBlue;
+
+                &:hover {
+                    cursor: zoom-in;
+                }
+            }
+
+            .projectCrossMark {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: .5rem;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: white;
+            }
+        }
+    }
+
+    .projectReferences {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        gap: 1rem;
+
+        .projectImgContainer {
+            position: relative;
+            width: 95%;
+            height: 15rem;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+
+            &:hover {
+                border: 1px solid $color-dogerBlue;
+
+                .projectImg {
+                    transform: scale(1.05);
+                }
+
+                .overlay {
+                    opacity: 1;
+                }
+
+            }
+
+            .overlay {
+                position: absolute;
+                height: 40%;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30%;
+                opacity: 0;
+                transition: opacity .3s ease;
+                color: $color-text;
+                font-weight: 800;
+                font-size: 1.3rem;
+            }
+        }
+
+        .projectImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 1px solid $color-dogerBlue;
+            border-radius: 10px;
+            transition: transform .3s ease;
+
+        }
+    }
+
+    .projectBtns {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+        flex-wrap: wrap;
+
+        button {
+            background-color: transparent;
+            border: 1px solid $color-dogerBlue;
+            border-radius: 10px;
+            width: 3rem;
+            height: 3rem;
+            color: $color-text;
+            margin-left: 1.5rem;
+            font-size: 20px;
+
+            &.active {
+                background-color: #c82fff;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: #c82fff;
+            }
+        }
+    }
+
+
+
+    @media (max-width:830px) {
+        .projectReferences {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            margin: 1rem;
+            .projectImgContainer {
+                height: 10rem;
+            }
+        }
+
+        .projectInfo {
+            &.active {
+                display: block;
+            }
+
+            .projectRight {
+                display: none;
+            }
+        }
+        .projectBtns {
+            margin-top: 2rem;
+        }
+    }
+}

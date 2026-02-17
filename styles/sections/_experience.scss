@@ -1,0 +1,81 @@
+.experienceContainer {
+    color: $color-text;
+
+    .experienceContainerDesktop {
+        .workExperienceItem {
+            .experienceItemContent {
+                display: flex;
+                align-items: flex-end;
+
+                .experienceYear {
+                    font-size: 1.5rem;
+                    padding-right: .8rem;
+                }
+
+                .experienceColorTitle {
+                    color: $color-dogerBlue;
+                    margin-left: 10px;
+                }
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    color: $color-dogerBlue;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .experienceDescription {
+                display: none;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+
+                p {
+                    padding-bottom: 1rem;
+                }
+
+                a {
+                    color: #c82fff;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    .experienceMobile {
+        display: none;
+    }
+
+    @media screen and (max-width:830px) {
+        .experienceContent {
+            display: none;
+        }
+
+        .experienceMobile {
+            display: block;
+            margin-bottom: 3rem;
+            .heading {
+                margin-bottom: 2rem;
+            }
+            .workExperienceItem {
+                margin-bottom: 1.5rem;
+                .experienceItemContent {
+                    display: block;
+                    margin-bottom: 1rem;
+
+                    .experienceJob {
+                        display: flex;
+                        color: $color-dogerBlue;
+                    }
+                }
+            }
+            .experienceDescription {
+                display: none;
+            }
+        }
+
+    }
+}
