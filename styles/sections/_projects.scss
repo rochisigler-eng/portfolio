@@ -124,9 +124,9 @@
     .projectReferences {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 1fr;
         margin-top: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
         gap: 1rem;
 
         .projectImgContainer {
@@ -181,7 +181,7 @@
     .projectBtns {
         display: flex;
         justify-content: center;
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
         flex-wrap: wrap;
 
         button {
@@ -210,8 +210,9 @@
     @media (max-width:830px) {
         .projectReferences {
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr ;
             margin: 1rem;
+            margin-bottom: 1rem;
             .projectImgContainer {
                 height: 10rem;
             }

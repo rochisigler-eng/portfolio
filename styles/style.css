@@ -557,6 +557,7 @@ footer .contactRight .contactMailIcon {
 
 .experienceContainer {
   color: #fff;
+  margin-bottom: 5rem;
 }
 .experienceContainer .experienceContainerDesktop .workExperienceItem .experienceItemContent {
   display: flex;
@@ -594,6 +595,9 @@ footer .contactRight .contactMailIcon {
   display: none;
 }
 @media screen and (max-width: 830px) {
+  .experienceContainer {
+    margin-bottom: 1rem;
+  }
   .experienceContainer .experienceContent {
     display: none;
   }
@@ -720,9 +724,9 @@ footer .contactRight .contactMailIcon {
 .projects .projectReferences {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr;
   margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   gap: 1rem;
 }
 .projects .projectReferences .projectImgContainer {
@@ -769,7 +773,7 @@ footer .contactRight .contactMailIcon {
 .projects .projectBtns {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 .projects .projectBtns button {
@@ -792,8 +796,9 @@ footer .contactRight .contactMailIcon {
 @media (max-width: 830px) {
   .projects .projectReferences {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     margin: 1rem;
+    margin-bottom: 1rem;
   }
   .projects .projectReferences .projectImgContainer {
     height: 10rem;

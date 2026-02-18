@@ -151,7 +151,7 @@ const displayProjects = (projects) => {
     )
 }
 
-displayProjects(workPortfolio.slice(0,10))
+displayProjects(workPortfolio.slice(0,4))
 
 
 projectButtons[0].classList.add("active");
@@ -164,8 +164,8 @@ projectButtonsContainer.addEventListener("click", (e) => {
 
     const page = Number(e.target.dataset.page)
 
-    const start = page * 10
-    const end = start + 10
+    const start = page * 4
+    const end = start + 4
 
     projectContainer.innerHTML = ""
     displayProjects(workPortfolio.slice(start, end))
