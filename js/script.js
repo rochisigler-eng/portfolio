@@ -190,7 +190,7 @@ const openProject = (index) => {
     projectNumber.textContent = `Project #${project.id + 1}`;
     projectDetails.innerHTML = `
                 <h2 class="projectTitle">${project.name}</h2>
-                                <p class="detailsPara"><strong>Developed with: </strong>${project.type}</p>
+                                <p class="detailsPara"><strong>Tech Stack: </strong>${project.type}</p>
                                 <p class="detailsPara"><strong>Description: </strong>${project.description}</p>
                                 <p class="detailsPara"><strong>Date: </strong>${project.date}</p>
                                 <p class="detailsPara"><strong>Status: </strong>${project.status}</p>
